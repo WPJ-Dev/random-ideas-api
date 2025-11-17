@@ -1,0 +1,22 @@
+{
+  "name": "random-ideas-api",
+  "version": "1.0.0",
+  "description": "Idea sharing app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WPJ-Dev/random-ideas-api.git"
+  },
+  "author": "Willie Pruitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WPJ-Dev/random-ideas-api/issues"
+  },
+  "homepage": "https://github.com/WPJ-Dev/random-ideas-api#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
