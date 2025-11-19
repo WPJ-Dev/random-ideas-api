@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 require('dotenv').config();
 
@@ -7,6 +8,11 @@ const connectDB = require('./config/db');
 connectDB();
 
 const app = express();
+
+// Static Folder
+app.use(express.static(path.join(__dirname, 'random-ideas-client', 'public')));
+// app.use(express.static(path.join('../', 'random-ideas-client', 'public')));
+
 
 // Body parser middleware
 app.use(express.json());
