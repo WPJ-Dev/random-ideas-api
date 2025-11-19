@@ -20,7 +20,6 @@ class IdeaList {
             const res = await IdeasApi.getIdeas();
             this._ideas = res.data.data;
             this.render();
-            console.log(this._ideas);
         } catch(error) {
             console.log(error);
         }

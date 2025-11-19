@@ -20,7 +20,6 @@ class Modal {
     }
 
     outsideClick(e) {
-        console.log(e);
         if(e.target === this._modal) {
             this.close();
         }
