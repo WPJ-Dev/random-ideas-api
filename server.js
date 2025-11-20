@@ -1,4 +1,6 @@
+const path = require('path');
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 
 const port = process.env.port || 5000;
@@ -8,9 +10,23 @@ connectDB();
 
 const app = express();
 
+// Static Folder
+app.use(express.static(path.join(__dirname, 'random-ideas-client', 'public')));
+// app.use(express.static(path.join('../', 'random-ideas-client', 'public')));
+
+
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Cors middleware
+app.use(cors({
+    origin: [
+        'http://localhost:5000',
+        'http://localhost:3000'
+    ],
+    credentials: true,
+}));
 
 app.get('/', (req, res) => {
     res.send({ message: 'Welcome to RandomIdeas API' });
